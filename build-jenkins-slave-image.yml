@@ -1,6 +1,8 @@
 - name: This playbook builds the jenkins slave docker images
   hosts: localhost
   tasks:
+          - name: Remove the existing containers
+            command: docker rm -f $(docker ps -aq)
           - name: Build docker image
             docker_image:
                     name: "verizon/jenkins-slave"
