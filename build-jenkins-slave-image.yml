@@ -5,4 +5,5 @@
             docker_image:
                     name: "verizon/jenkins-slave"
                     path: "."
+                    state: build
                     dockerfile: Dockerfile
